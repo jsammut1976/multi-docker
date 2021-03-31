@@ -11,10 +11,10 @@ script:
   - docker run -e CI=true jsammut1976/react-test npm test
 
 after_success:
-  - docker build -t jsammut1976/multi-client ./client
-  - docker build -t jsammut1976/multi-nginx ./nginx
-  - docker build -t jsammut1976/multi-server ./server
-  - docker build -t jsammut1976/multi-worker ./worker
+  - docker build -t jsammut/multi-client ./client
+  - docker build -t jsammut/multi-nginx ./nginx
+  - docker build -t jsammut/multi-server ./server
+  - docker build -t jsammut/multi-worker ./worker
 
   # Login to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
