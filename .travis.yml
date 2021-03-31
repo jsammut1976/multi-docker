@@ -1,4 +1,6 @@
 sudo: required
+language: generic
+
 services:
   - docker
 
@@ -21,5 +23,3 @@ after_success:
   - docker push jsammut1976/multi-nginx
   - docker push jsammut1976/multi-server
   - docker push jsammut1976/multi-worker
-  
-  # test line
